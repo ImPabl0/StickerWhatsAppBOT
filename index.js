@@ -39,8 +39,8 @@ client.on('message', async (message) => {
     if ((isGroups && config.groups) || !isGroups) {
 
         // Image to Sticker (Auto && Caption)
-        if ((message.type == "image" || message.type == "video" || message.type  == "gif") || (message._data.caption == `${config.prefix}sticker`)) {
-            client.sendMessage(message.from, "*[⏳]* Loading..");
+        if ((message.type == "image" || message.type == "video" || message.type  == "gif") || (message._data.caption == `${config.prefix}f`)) {
+            message.react("⏳");
             try {
                 const media = await message.downloadMedia();
                 client.sendMessage(message.from, media, {
@@ -48,17 +48,17 @@ client.on('message', async (message) => {
                     stickerName: config.name, // Sticker Name = Edit in 'config/config.json'
                     stickerAuthor: config.author // Sticker Author = Edit in 'config/config.json'
                 }).then(() => {
-                    client.sendMessage(message.from, "*[✅]* Successfully!");
+                    message.react("✅")
                 });
             } catch {
-                client.sendMessage(message.from, "*[❎]* Failed!");
+                client.sendMessage(message.from, "Erro ao fazer figurinha ☹");
             }
 
         // Image to Sticker (With Reply Image)
-        } else if (message.body == `${config.prefix}sticker`) {
+        } else if (message.body == `${config.prefix}f`) {
             const quotedMsg = await message.getQuotedMessage(); 
             if (message.hasQuotedMsg && quotedMsg.hasMedia) {
-                client.sendMessage(message.from, "*[⏳]* Loading..");
+                message.react("⏳");
                 try {
                     const media = await quotedMsg.downloadMedia();
                     client.sendMessage(message.from, media, {
@@ -66,13 +66,13 @@ client.on('message', async (message) => {
                         stickerName: config.name, // Sticker Name = Edit in 'config/config.json'
                         stickerAuthor: config.author // Sticker Author = Edit in 'config/config.json'
                     }).then(() => {
-                        client.sendMessage(message.from, "*[✅]* Successfully!");
+                        message.react("✅");
                     });
                 } catch {
-                    client.sendMessage(message.from, "*[❎]* Failed!");
+                    client.sendMessage(message.from, "Erro ao fazer figurinha ☹");
                 }
             } else {
-                client.sendMessage(message.from, "*[❎]* Reply Image First!");
+                client.sendMessage(message.from, "Envie uma imagem primeiro!");
             }
 
         // Sticker to Image (Auto)

@@ -1,0 +1,12 @@
+2023/07/04-19:55:20.311 4530 Reusing MANIFEST D:\GitHub\StickerWhatsAppBOT\.wwebjs_auth\session-client\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/07/04-19:55:20.312 4530 Recovering log #8
+2023/07/04-19:55:20.764 4530 Reusing old log D:\GitHub\StickerWhatsAppBOT\.wwebjs_auth\session-client\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000008.log 
+2023/07/04-19:55:21.838 ce0 Level-0 table #14: started
+2023/07/04-19:55:22.043 ce0 Level-0 table #14: 1224961 bytes OK
+2023/07/04-19:55:22.121 ce0 Delete type=0 #8
+2023/07/04-19:55:31.913 ce0 Compacting 1@1 + 1@2 files
+2023/07/04-19:55:32.315 ce0 Generated table #15@1: 20823 keys, 881424 bytes
+2023/07/04-19:55:32.315 ce0 Compacted 1@1 + 1@2 files => 881424 bytes
+2023/07/04-19:55:32.381 ce0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/07/04-19:55:32.383 ce0 Delete type=2 #11
+2023/07/04-19:55:32.383 ce0 Delete type=2 #14

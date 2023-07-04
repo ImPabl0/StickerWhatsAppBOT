@@ -1,7 +1,7 @@
 {
-    "name": "StickerBOT",
-    "author": "DrelezTM",
-    "prefix": "!",
-    "timezone": "Asia/Jakarta",
+    "name": "ZapBOT",
+    "author": "Pablo",
+    "prefix": "#",
+    "timezone": "Sao Paulo/Brazil",
     "groups": true
 }
