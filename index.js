@@ -8,7 +8,7 @@ const client = new Client({
     restartOnAuthFail: true,
     puppeteer: {
         headless: true,
-        args: [ '--no-sandbox', '--disable-setuid-sandbox' ]
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
     },
     ffmpeg: './ffmpeg.exe',
     authStrategy: new LocalAuth({ clientId: "client" })
@@ -39,7 +39,7 @@ client.on('message', async (message) => {
     if ((isGroups && config.groups) || !isGroups) {
 
         // Image to Sticker (Auto && Caption)
-        if ((message.type == "image" || message.type == "video" || message.type  == "gif") || (message._data.caption == `${config.prefix}f`)) {
+        if ((message.type == "image" || message.type == "video" || message.type == "gif") || (message._data.caption == `${config.prefix}f`)) {
             message.react("⏳");
             try {
                 const media = await message.downloadMedia();
@@ -54,9 +54,9 @@ client.on('message', async (message) => {
                 client.sendMessage(message.from, "Erro ao fazer figurinha ☹");
             }
 
-        // Image to Sticker (With Reply Image)
+            // Image to Sticker (With Reply Image)
         } else if (message.body == `${config.prefix}f`) {
-            const quotedMsg = await message.getQuotedMessage(); 
+            const quotedMsg = await message.getQuotedMessage();
             if (message.hasQuotedMsg && quotedMsg.hasMedia) {
                 message.react("⏳");
                 try {
@@ -75,21 +75,21 @@ client.on('message', async (message) => {
                 client.sendMessage(message.from, "Envie uma imagem primeiro!");
             }
 
-        // Sticker to Image (Auto)
+            // Sticker to Image (Auto)
         } else if (message.type == "sticker") {
             client.sendMessage(message.from, "*[⏳]* Loading..");
             try {
                 const media = await message.downloadMedia();
                 client.sendMessage(message.from, media).then(() => {
                     client.sendMessage(message.from, "*[✅]* Successfully!");
-                });  
+                });
             } catch {
                 client.sendMessage(message.from, "*[❎]* Failed!");
             }
 
-        // Sticker to Image (With Reply Sticker)
+            // Sticker to Image (With Reply Sticker)
         } else if (message.body == `${config.prefix}image`) {
-            const quotedMsg = await message.getQuotedMessage(); 
+            const quotedMsg = await message.getQuotedMessage();
             if (message.hasQuotedMsg && quotedMsg.hasMedia) {
                 client.sendMessage(message.from, "*[⏳]* Loading..");
                 try {
@@ -104,12 +104,12 @@ client.on('message', async (message) => {
                 client.sendMessage(message.from, "*[❎]* Reply Sticker First!");
             }
 
-        // Claim or change sticker name and sticker author
+            // Claim or change sticker name and sticker author
         } else if (message.body.startsWith(`${config.prefix}change`)) {
             if (message.body.includes('|')) {
                 let name = message.body.split('|')[0].replace(message.body.split(' ')[0], '').trim();
                 let author = message.body.split('|')[1].trim();
-                const quotedMsg = await message.getQuotedMessage(); 
+                const quotedMsg = await message.getQuotedMessage();
                 if (message.hasQuotedMsg && quotedMsg.hasMedia) {
                     client.sendMessage(message.from, "*[⏳]* Loading..");
                     try {
@@ -130,8 +130,8 @@ client.on('message', async (message) => {
             } else {
                 client.sendMessage(message.from, `*[❎]* Run the command :\n*${config.prefix}change <name> | <author>*`);
             }
-        
-        // Read chat
+
+            // Read chat
         } else {
             client.getChatById(message.id.remote).then(async (chat) => {
                 await chat.sendSeen();
