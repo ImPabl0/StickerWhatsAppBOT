@@ -39,7 +39,7 @@ client.on('message', async (message) => {
     if ((isGroups && config.groups) || !isGroups) {
 
         // Image to Sticker (Auto && Caption)
-        if ((message.type == "image" || message.type == "video" || message.type == "gif") || (message._data.caption == `${config.prefix}f`)) {
+        if ((message.type == "image" || message.type == "video" || message.type == "gif") && (message._data.caption == `${config.prefix}f`)) {
             message.react("⏳");
             try {
                 const media = await message.downloadMedia();
