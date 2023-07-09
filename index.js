@@ -35,9 +35,7 @@ client.on('ready', () => {
 });
 
 client.on('message', async (message) => {
-    if ((await message.getContact()).number=="+5575988740158") {
-        client.sendMessage(message.from,"Olá mestre");
-    }
+    console.log('Mensagem recebida de '+(await message.getContact()).number)
     const isGroups = message.from.endsWith('@g.us') ? true : false;
     if ((isGroups && config.groups) || !isGroups) {
 
