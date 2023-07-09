@@ -76,32 +76,21 @@ client.on('message', async (message) => {
             }
 
             // Sticker to Image (Auto)
-        } else if (message.type == "sticker") {
-            client.sendMessage(message.from, "*[⏳]* Loading..");
-            try {
-                const media = await message.downloadMedia();
-                client.sendMessage(message.from, media).then(() => {
-                    client.sendMessage(message.from, "*[✅]* Successfully!");
-                });
-            } catch {
-                client.sendMessage(message.from, "*[❎]* Failed!");
-            }
-
-            // Sticker to Image (With Reply Sticker)
-        } else if (message.body == `${config.prefix}image`) {
+        }  else if (message.body == `${config.prefix}imagem`) {
             const quotedMsg = await message.getQuotedMessage();
             if (message.hasQuotedMsg && quotedMsg.hasMedia) {
-                client.sendMessage(message.from, "*[⏳]* Loading..");
+                message.react("⏳");
                 try {
                     const media = await quotedMsg.downloadMedia();
                     client.sendMessage(message.from, media).then(() => {
-                        client.sendMessage(message.from, "*[✅]* Successfully!");
+                        message.react("✅");
                     });
                 } catch {
-                    client.sendMessage(message.from, "*[❎]* Failed!");
+                    client.sendMessage(message.from, "*Erro ao converter a mídia!");
                 }
             } else {
-                client.sendMessage(message.from, "*[❎]* Reply Sticker First!");
+                message.react("❓");
+                client.sendMessage(message.from, "Responda a uma figurinha!");
             }
 
             // Claim or change sticker name and sticker author
@@ -130,7 +119,6 @@ client.on('message', async (message) => {
             } else {
                 client.sendMessage(message.from, `*[❎]* Run the command :\n*${config.prefix}change <name> | <author>*`);
             }
-
             // Read chat
         } else {
             client.getChatById(message.id.remote).then(async (chat) => {
