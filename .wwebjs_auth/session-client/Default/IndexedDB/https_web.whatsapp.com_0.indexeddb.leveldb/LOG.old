@@ -1,12 +1,12 @@
-2023/07/04-21:36:44.855 4d80 Reusing MANIFEST D:\GitHub\StickerWhatsAppBOT\.wwebjs_auth\session-client\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/07/04-21:36:45.028 4d80 Recovering log #13
-2023/07/04-21:36:45.052 4d80 Reusing old log D:\GitHub\StickerWhatsAppBOT\.wwebjs_auth\session-client\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000013.log 
-2023/07/04-21:37:13.002 2194 Level-0 table #18: started
-2023/07/04-21:37:13.189 2194 Level-0 table #18: 1255029 bytes OK
-2023/07/04-21:37:13.309 2194 Delete type=0 #13
-2023/07/04-21:37:13.717 1580 Compacting 1@1 + 1@2 files
-2023/07/04-21:37:14.149 1580 Generated table #19@1: 32499 keys, 1394085 bytes
-2023/07/04-21:37:14.149 1580 Compacted 1@1 + 1@2 files => 1394085 bytes
-2023/07/04-21:37:14.192 1580 compacted to: files[ 0 0 1 0 0 0 0 ]
-2023/07/04-21:37:14.193 1580 Delete type=2 #15
-2023/07/04-21:37:14.193 1580 Delete type=2 #18
+2023/07/04-21:45:35.431 1f8c Reusing MANIFEST D:\GitHub\StickerWhatsAppBOT\.wwebjs_auth\session-client\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/07/04-21:45:35.432 1f8c Recovering log #17
+2023/07/04-21:45:35.747 1f8c Reusing old log D:\GitHub\StickerWhatsAppBOT\.wwebjs_auth\session-client\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000017.log 
+2023/07/04-21:52:04.668 15c8 Level-0 table #22: started
+2023/07/04-21:52:04.859 15c8 Level-0 table #22: 1305418 bytes OK
+2023/07/04-21:52:04.947 15c8 Delete type=0 #17
+2023/07/04-21:52:05.576 1f8c Compacting 1@1 + 1@2 files
+2023/07/04-21:52:05.842 1f8c Generated table #23@1: 35051 keys, 1603919 bytes
+2023/07/04-21:52:05.842 1f8c Compacted 1@1 + 1@2 files => 1603919 bytes
+2023/07/04-21:52:05.886 1f8c compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/07/04-21:52:05.887 1f8c Delete type=2 #19
+2023/07/04-21:52:05.887 1f8c Delete type=2 #22

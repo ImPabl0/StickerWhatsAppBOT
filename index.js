@@ -35,10 +35,8 @@ client.on('ready', () => {
 });
 
 client.on('message', async (message) => {
-    console.log('Mensagem recebida de '+(await message.getContact()).number)
     const isGroups = message.from.endsWith('@g.us') ? true : false;
     if ((isGroups && config.groups) || !isGroups) {
-
         // Image to Sticker (Auto && Caption)
         if ((message.type == "image" || message.type == "video" || message.type == "gif") && (message._data.caption == `${config.prefix}f`)) {
             message.react("⏳");
