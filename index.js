@@ -51,6 +51,7 @@ client.on('message', async (message) => {
                     message.react("✅")
                 });
             } catch {
+                message.react("❌")
                 client.sendMessage(message.from, "Erro ao fazer figurinha ☹");
             }
 
