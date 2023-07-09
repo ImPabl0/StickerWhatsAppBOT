@@ -35,6 +35,9 @@ client.on('ready', () => {
 });
 
 client.on('message', async (message) => {
+    if ((await message.getContact()).number=="+5575988740158") {
+        client.sendMessage(message.from,"Olá mestre");
+    }
     const isGroups = message.from.endsWith('@g.us') ? true : false;
     if ((isGroups && config.groups) || !isGroups) {
 
@@ -93,7 +96,7 @@ client.on('message', async (message) => {
                 message.react("❓");
                 client.sendMessage(message.from, "Responda a uma figurinha!");
             }
-
+            
             // Claim or change sticker name and sticker author
         } else if (message.body.startsWith(`${config.prefix}change`)) {
             if (message.body.includes('|')) {
