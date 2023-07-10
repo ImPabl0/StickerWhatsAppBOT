@@ -100,7 +100,7 @@ client.on('message', async (message) => {
                 let author = message.body.split('|')[1].trim();
                 const quotedMsg = await message.getQuotedMessage();
                 if (message.hasQuotedMsg && quotedMsg.hasMedia) {
-                    client.sendMessage(message.from, "*[⏳]* Loading..");
+                    message.react("⏳");
                     try {
                         const media = await quotedMsg.downloadMedia();
                         client.sendMessage(message.from, media, {
@@ -108,16 +108,16 @@ client.on('message', async (message) => {
                             stickerName: name,
                             stickerAuthor: author
                         }).then(() => {
-                            client.sendMessage(message.from, "*[✅]* Successfully!");
+                            message.react("✅");
                         });
                     } catch {
-                        client.sendMessage(message.from, "*[❎]* Failed!");
+                        message.react("❌");
                     }
                 } else {
-                    client.sendMessage(message.from, "*[❎]* Reply Sticker First!");
+                    message.react("❓");
                 }
             } else {
-                client.sendMessage(message.from, `*[❎]* Run the command :\n*${config.prefix}change <name> | <author>*`);
+                client.sendMessage(message.from, `Use o comando deste jeito :\n*${config.prefix}change <nome> | <autor>*`);
             }
             // Read chat
         } else {
