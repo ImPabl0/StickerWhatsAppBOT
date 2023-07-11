@@ -1,6 +1,7 @@
 const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const moment = require('moment-timezone');
+const versiculo = require('./functions/bible')
 const colors = require('colors');
 const fs = require('fs');
 
@@ -120,6 +121,8 @@ client.on('message', async (message) => {
                 client.sendMessage(message.from, `Use o comando deste jeito :\n*${config.prefix}change <nome> | <autor>*`);
             }
             // Read chat
+        } else if(message.body.startsWith(`${config.prefix}wilcson`)){
+            client.sendMessage(message.from,await getVersiculo())
         } else {
             client.getChatById(message.id.remote).then(async (chat) => {
                 await chat.sendSeen();
