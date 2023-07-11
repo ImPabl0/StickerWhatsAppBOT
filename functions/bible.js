@@ -17,7 +17,6 @@ const scripture = {
       versiculoFinal+="\""+result.text+"\""+"\n";
       versiculoFinal+=result.book.name+" ";
       versiculoFinal+=result.chapter+":"+result.number;
-      
     })
     return versiculoFinal;
   }
