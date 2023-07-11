@@ -408,3 +408,17 @@ dist
 .wwebjs_auth/session-client/Default/Service Worker/ScriptCache/index-dir/the-real-index
 .wwebjs_auth/session-client/Default/Session Storage/LOG
 .wwebjs_auth/session-client/Default/Session Storage/LOG.old
+.wwebjs_auth/session-client/Default/Cookies
+.wwebjs_auth/session-client/Default/QuotaManager
+.wwebjs_auth/session-client/Default/Cache/Cache_Data/data_0
+.wwebjs_auth/session-client/Default/Cache/Cache_Data/data_1
+.wwebjs_auth/session-client/Default/Cache/Cache_Data/data_2
+.wwebjs_auth/session-client/Default/Cache/Cache_Data/data_3
+.wwebjs_auth/session-client/Default/Cache/Cache_Data/index
+.wwebjs_auth/session-client/Default/File System/Origins/LOG
+.wwebjs_auth/session-client/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/LOG
+.wwebjs_auth/session-client/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+.wwebjs_auth/session-client/Default/Local Storage/leveldb/LOG
+.wwebjs_auth/session-client/Default/Platform Notifications/LOG
+.wwebjs_auth/session-client/Default/Service Worker/Database/LOG
+.wwebjs_auth/session-client/Default/Session Storage/LOG
