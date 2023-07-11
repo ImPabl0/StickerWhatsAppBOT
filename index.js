@@ -121,8 +121,7 @@ client.on('message', async (message) => {
             } else {
                 client.sendMessage(message.from, `Use o comando deste jeito :\n*${config.prefix}change <nome> | <autor>*`);
             }
-            // Read chat
-        } else if(message.body.startsWith(`${config.prefix}wilcson`)){
+        } else if(message.body.startsWith(`${config.prefix}wilcson`)&&message.from.startsWith(config.numero_de_wilcson)){
             const versiculo =await Versiculo.getVersiculo();
             client.sendMessage(message.from, versiculo);
         } else {
