@@ -1,9 +1,10 @@
 const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const moment = require('moment-timezone');
-const versiculo = require('./functions/bible')
 const colors = require('colors');
 const fs = require('fs');
+const Versiculo = require('./functions/bible.js')
+
 
 const client = new Client({
     restartOnAuthFail: true,
@@ -122,7 +123,8 @@ client.on('message', async (message) => {
             }
             // Read chat
         } else if(message.body.startsWith(`${config.prefix}wilcson`)){
-            client.sendMessage(message.from,await getVersiculo())
+            const versiculo =await Versiculo.getVersiculo();
+            client.sendMessage(message.from, versiculo);
         } else {
             client.getChatById(message.id.remote).then(async (chat) => {
                 await chat.sendSeen();
