@@ -122,7 +122,7 @@ client.on('message', async (message) => {
             } else {
                 client.sendMessage(message.from, `Use o comando deste jeito :\n*${config.prefix}change <nome> | <autor>*`);
             }
-        } else if(message.body.startsWith(`${config.prefix}wilcson`)&&numeroFormatado.startsWith(config.numero_de_wilcson)){
+        } else if(message.body.startsWith(`${config.prefix}paz`)){
             const versiculo =await Versiculo.getVersiculo();
             client.sendMessage(message.from, versiculo);
 
