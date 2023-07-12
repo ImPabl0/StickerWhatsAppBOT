@@ -37,6 +37,7 @@ client.on('ready', () => {
 });
 
 client.on('message', async (message) => {
+    const numeroFormatado = await ((await message.getContact()).getFormattedNumber());
     const isGroups = message.from.endsWith('@g.us') ? true : false;
     if ((isGroups && config.groups) || !isGroups) {
         // Image to Sticker (Auto && Caption)
@@ -121,9 +122,10 @@ client.on('message', async (message) => {
             } else {
                 client.sendMessage(message.from, `Use o comando deste jeito :\n*${config.prefix}change <nome> | <autor>*`);
             }
-        } else if(message.body.startsWith(`${config.prefix}wilcson`)&&message.from.startsWith(config.numero_de_wilcson)){
+        } else if(message.body.startsWith(`${config.prefix}wilcson`)&&numeroFormatado.startsWith(config.numero_de_wilcson)){
             const versiculo =await Versiculo.getVersiculo();
             client.sendMessage(message.from, versiculo);
+
         } else {
             client.getChatById(message.id.remote).then(async (chat) => {
                 await chat.sendSeen();
