@@ -84,7 +84,14 @@ client.on('message', async (message) => {
             if (message.hasQuotedMsg && quotedMsg.hasMedia) {
                 message.react("⏳");
                 try {
-                    const media = await quotedMsg.downloadMedia();
+                    function timeout(ms) {
+                        return new Promise((resolve, reject) => {
+                          setTimeout(() => {
+                            reject(new Error('Tempo excedido'));
+                          }, ms);
+                        });
+                      }
+                    const media = await new Promise.race([await quotedMsg.downloadMedia(), timeout(10000)]);
                     client.sendMessage(message.from, media).then(() => {
                         message.react("✅");
                     });
