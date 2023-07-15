@@ -49,8 +49,8 @@ typings/
 
 # Optional npm cache directory
 .npm
-.wwebjs_auth/
-.wwebjs_cache/
+/.wwebjs_auth/
+/.wwebjs_cache/
 # Optional eslint cache
 .eslintcache
 
