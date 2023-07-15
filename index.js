@@ -96,7 +96,8 @@ client.on('message', async (message) => {
                         message.react("✅");
                     });
                 } catch {
-                    client.sendMessage(message.from, "*Erro ao converter a mídia!");
+                    client.sendMessage(message.from, "Erro ao converter a mídia!");
+                    message.react("❌");
                 }
             } else {
                 message.react("❓");
