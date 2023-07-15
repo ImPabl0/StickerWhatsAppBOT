@@ -1,55 +1,12 @@
-2023/07/09-00:12:21.373 7a4 Reusing MANIFEST D:\GitHub\StickerWhatsAppBOT\.wwebjs_auth\session-client\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/07/09-00:12:21.536 7a4 Recovering log #21
-2023/07/09-00:12:21.556 7a4 Reusing old log D:\GitHub\StickerWhatsAppBOT\.wwebjs_auth\session-client\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000021.log 
-2023/07/09-00:12:36.389 416c Level-0 table #26: started
-2023/07/09-00:12:36.552 416c Level-0 table #26: 838506 bytes OK
-2023/07/09-00:12:36.593 416c Delete type=0 #21
-2023/07/09-00:12:36.688 35d8 Compacting 1@1 + 1@2 files
-2023/07/09-00:12:37.069 35d8 Generated table #27@1: 45487 keys, 1991174 bytes
-2023/07/09-00:12:37.069 35d8 Compacted 1@1 + 1@2 files => 1991174 bytes
-2023/07/09-00:12:37.118 35d8 compacted to: files[ 0 0 1 0 0 0 0 ]
-2023/07/09-00:12:44.126 35d8 Level-0 table #29: started
-2023/07/09-00:12:44.316 35d8 Level-0 table #29: 1269375 bytes OK
-2023/07/09-00:12:44.360 35d8 Delete type=2 #23
-2023/07/09-00:12:44.360 35d8 Delete type=0 #25
-2023/07/09-00:12:44.360 35d8 Delete type=2 #26
-2023/07/09-00:12:44.457 ca4 Compacting 1@1 + 1@2 files
-2023/07/09-00:12:44.743 ca4 Generated table #30@1: 43182 keys, 2260328 bytes
-2023/07/09-00:12:44.837 ca4 Generated table #31@1: 2900 keys, 80609 bytes
-2023/07/09-00:12:44.837 ca4 Compacted 1@1 + 1@2 files => 2340937 bytes
-2023/07/09-00:12:44.858 ca4 compacted to: files[ 0 0 2 0 0 0 0 ]
-2023/07/09-00:12:44.859 ca4 Delete type=2 #27
-2023/07/09-00:12:44.859 ca4 Delete type=2 #29
-2023/07/09-00:12:48.344 35d8 Level-0 table #33: started
-2023/07/09-00:12:48.555 35d8 Level-0 table #33: 1568471 bytes OK
-2023/07/09-00:12:48.584 35d8 Delete type=0 #28
-2023/07/09-00:12:48.589 35d8 Compacting 1@1 + 1@2 files
-2023/07/09-00:12:48.828 35d8 Generated table #34@1: 42069 keys, 2251265 bytes
-2023/07/09-00:12:48.952 35d8 Generated table #35@1: 10562 keys, 615524 bytes
-2023/07/09-00:12:48.952 35d8 Compacted 1@1 + 1@2 files => 2866789 bytes
-2023/07/09-00:12:48.984 35d8 compacted to: files[ 0 0 3 0 0 0 0 ]
-2023/07/09-00:12:53.780 ca4 Level-0 table #37: started
-2023/07/09-00:12:54.010 ca4 Level-0 table #37: 1885742 bytes OK
-2023/07/09-00:12:54.034 ca4 Delete type=2 #30
-2023/07/09-00:12:54.034 ca4 Delete type=0 #32
-2023/07/09-00:12:54.034 ca4 Delete type=2 #33
-2023/07/09-00:12:54.038 ca4 Compacting 1@1 + 2@2 files
-2023/07/09-00:12:54.376 ca4 Generated table #38@1: 42330 keys, 2243200 bytes
-2023/07/09-00:12:54.484 ca4 Generated table #39@1: 9100 keys, 542984 bytes
-2023/07/09-00:12:54.484 ca4 Compacted 1@1 + 2@2 files => 2786184 bytes
-2023/07/09-00:12:54.508 ca4 compacted to: files[ 0 0 3 0 0 0 0 ]
-2023/07/09-00:12:54.509 ca4 Delete type=2 #34
-2023/07/09-00:12:54.509 ca4 Delete type=2 #35
-2023/07/09-00:12:54.509 ca4 Delete type=2 #37
-2023/07/09-00:13:07.039 14fc Level-0 table #41: started
-2023/07/09-00:13:07.262 14fc Level-0 table #41: 1982460 bytes OK
-2023/07/09-00:13:07.291 14fc Delete type=0 #36
-2023/07/09-00:13:07.932 14fc Compacting 1@1 + 3@2 files
-2023/07/09-00:13:08.223 14fc Generated table #42@1: 40841 keys, 2243670 bytes
-2023/07/09-00:13:08.357 14fc Generated table #43@1: 13992 keys, 678598 bytes
-2023/07/09-00:13:08.357 14fc Compacted 1@1 + 3@2 files => 2922268 bytes
-2023/07/09-00:13:08.383 14fc compacted to: files[ 0 0 2 0 0 0 0 ]
-2023/07/09-00:13:08.384 14fc Delete type=2 #31
-2023/07/09-00:13:08.384 14fc Delete type=2 #38
-2023/07/09-00:13:08.384 14fc Delete type=2 #39
-2023/07/09-00:13:08.384 14fc Delete type=2 #41
+2023/07/15-01:31:12.016 3508 Reusing MANIFEST D:\GitHub\StickerWhatsAppBOT\.wwebjs_auth\session-client\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/07/15-01:31:12.016 3508 Recovering log #17
+2023/07/15-01:31:12.244 3508 Reusing old log D:\GitHub\StickerWhatsAppBOT\.wwebjs_auth\session-client\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000017.log 
+2023/07/15-01:31:51.737 27ac Level-0 table #22: started
+2023/07/15-01:31:52.017 27ac Level-0 table #22: 1254350 bytes OK
+2023/07/15-01:31:52.055 27ac Delete type=0 #17
+2023/07/15-01:31:55.797 27ac Compacting 1@1 + 1@2 files
+2023/07/15-01:31:56.234 27ac Generated table #23@1: 36370 keys, 1636125 bytes
+2023/07/15-01:31:56.234 27ac Compacted 1@1 + 1@2 files => 1636125 bytes
+2023/07/15-01:31:56.300 27ac compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/07/15-01:31:56.300 27ac Delete type=2 #19
+2023/07/15-01:31:56.300 27ac Delete type=2 #22

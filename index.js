@@ -9,6 +9,7 @@ const Versiculo = require('./functions/bible.js')
 const client = new Client({
     restartOnAuthFail: true,
     puppeteer: {
+        ignoreHTTPSErrors:true,
         headless: true,
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     },
@@ -39,6 +40,10 @@ client.on('ready', () => {
 client.on('message', async (message) => {
     const numeroFormatado = await ((await message.getContact()).getFormattedNumber());
     const isGroups = message.from.endsWith('@g.us') ? true : false;
+    // if(numeroFormatado!=config.numero_dono&&message.body.startsWith(config.prefix)){
+    //     client.sendMessage(message.from, "EM MANUTENÇÃO, PORFAVOR AGUARDE.")
+    //     return;
+    // }
     if ((isGroups && config.groups) || !isGroups) {
         // Image to Sticker (Auto && Caption)
         if ((message.type == "image" || message.type == "video" || message.type == "gif") && (message._data.caption == `${config.prefix}f`)) {
@@ -65,6 +70,7 @@ client.on('message', async (message) => {
                 try {
                     const media = await quotedMsg.downloadMedia();
                     client.sendMessage(message.from, media, {
+
                         sendMediaAsSticker: true,
                         stickerName: config.name, // Sticker Name = Edit in 'config/config.json'
                         stickerAuthor: config.author // Sticker Author = Edit in 'config/config.json'
@@ -80,25 +86,37 @@ client.on('message', async (message) => {
 
             // Sticker to Image (Auto)
         }  else if (message.body == `${config.prefix}imagem`) {
+            
+            
             const quotedMsg = await message.getQuotedMessage();
+            
             if (message.hasQuotedMsg && quotedMsg.hasMedia) {
+           
                 message.react("⏳");
                 try {
-                    function timeout(ms) {
-                        return new Promise((resolve, reject) => {
-                          setTimeout(() => {
-                            reject(new Error('Tempo excedido'));
-                          }, ms);
-                        });
-                      }
-                    const media = await new Promise.race([await quotedMsg.downloadMedia(), timeout(10000)]);
-                    client.sendMessage(message.from, media).then(() => {
-                        message.react("✅");
-                    });
-                } catch {
+                    let media = null;
+                    try {
+                        media = await quotedMsg.downloadMedia()
+                    if(!media.mimetype.startsWith("image/webp")){
+                        message.react("❌");
+                        client.sendMessage(message.from,"Este comando serve apenas para figurinhas.");
+                        return;
+                    }
+                        console.log(`Tipo de midia é ${media.mimetype}`)             
+                    } catch (error) {
+                        client.sendMessage(message.from, "Erro ao converter a mídia!");
+                        message.react("❌");    
+                    }
+                    if (media!=null) {
+                        client.sendMessage(message.from, media,{}).then(() => {
+                            message.react("✅");
+                          });
+                    }
+                   
+                  } catch (error) {
                     client.sendMessage(message.from, "Erro ao converter a mídia!");
                     message.react("❌");
-                }
+                  }
             } else {
                 message.react("❓");
                 client.sendMessage(message.from, "Responda a uma figurinha!");
