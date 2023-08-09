@@ -63,7 +63,17 @@ client.on('message', async (message) => {
             }
 
             // Image to Sticker (With Reply Image)
-        } else if (message.body == `${config.prefix}f`) {
+        } else if 
+        (message.body.startsWith(`${config.prefix}reiniciar`)){
+            if(numeroFormatado!=config.numero_dono){
+                message.react("❓")
+                client.sendMessage(message.from,"Você não tem permissão para executar esse comando.") 
+                return;
+            }
+            client.sendMessage(message.from,"Reiniciando bot...")
+            process.kill(process.pid)
+        }else if
+        (message.body == `${config.prefix}f`) {
             const quotedMsg = await message.getQuotedMessage();
             if (message.hasQuotedMsg && quotedMsg.hasMedia) {
                 message.react("⏳");
