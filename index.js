@@ -70,10 +70,11 @@ client.on('message', async (message) => {
                await client.sendMessage(message.from,"Você não tem permissão para executar esse comando.") 
                 return;
             }
-          await  client.sendMessage(message.from,"Reiniciando bot...").then(()=>{
+            
+            message.reply("Reiniciando bot...")
+            message.react("🔄")
             console.log("Reiniciando bot");
             process.kill(process.pid)
-          })
           
         }else if
         (message.body == `${config.prefix}f`) {
