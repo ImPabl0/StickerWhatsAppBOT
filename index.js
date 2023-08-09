@@ -67,10 +67,10 @@ client.on('message', async (message) => {
         (message.body.startsWith(`${config.prefix}reiniciar`)){
             if(numeroFormatado!=config.numero_dono){
                 message.react("❓")
-                client.sendMessage(message.from,"Você não tem permissão para executar esse comando.") 
+               await client.sendMessage(message.from,"Você não tem permissão para executar esse comando.") 
                 return;
             }
-            client.sendMessage(message.from,"Reiniciando bot...")
+          await  client.sendMessage(message.from,"Reiniciando bot...")
             process.kill(process.pid)
         }else if
         (message.body == `${config.prefix}f`) {
