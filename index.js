@@ -61,8 +61,6 @@ client.on('message', async (message) => {
                 message.react("❌")
                 client.sendMessage(message.from, "Erro ao fazer figurinha ☹");
             }
-
-            // Image to Sticker (With Reply Image)
         } else if 
         (message.body.startsWith(`${config.prefix}reiniciar`)){
             if(numeroFormatado!=config.numero_dono){
@@ -70,16 +68,12 @@ client.on('message', async (message) => {
                await client.sendMessage(message.from,"Você não tem permissão para executar esse comando.") 
                 return;
             }
-            
-            message.reply("Reiniciando bot...")
-            message.react("🔄")
+           await message.reply("Reiniciando bot...")
+           await message.react("🔄")
             console.log("Reiniciando bot");
-            //aguardar 1 segundo e matar o próprio processo
             setTimeout(() => {
                 process.exit();
-            }, 1000); 
-            
-
+            }, 3000);
           
         }else if
         (message.body == `${config.prefix}f`) {
