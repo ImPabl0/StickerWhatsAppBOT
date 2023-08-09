@@ -74,12 +74,7 @@ client.on('message', async (message) => {
             message.reply("Reiniciando bot...")
             message.react("🔄")
             console.log("Reiniciando bot");
-            //aguardar 1 segundo e matar o próprio processo
-            setTimeout(() => {
-                process.exit();
-            }, 1000); 
-            
-
+            process.exit();
           
         }else if
         (message.body == `${config.prefix}f`) {
