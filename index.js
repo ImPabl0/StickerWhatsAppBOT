@@ -74,7 +74,6 @@ client.on('message', async (message) => {
             setTimeout(() => {
                 process.exit();
             }, 3000);
-          
         }else if
         (message.body == `${config.prefix}f`) {
             const quotedMsg = await message.getQuotedMessage();
