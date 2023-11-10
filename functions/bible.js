@@ -1,15 +1,15 @@
 const scripture = {
     book: {
-      abbrev: { pt: "gn", en: "gn" },
-      name: "Gênesis",
-      author: "Moisés",
-      group: "Pentateuco",
-      version: "nvi"
+      abbrev: { },
+      name,
+      author,
+      group,
+      version
     },
-    chapter: 1,
-    number: 1,
-    text: "No princípio Deus criou os céus e a terra."
-  };
+    chapter,
+    number,
+    text
+};
 
  async function getVersiculo() {
     var versiculoFinal="";
